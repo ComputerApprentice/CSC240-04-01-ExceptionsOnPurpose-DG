@@ -16,13 +16,20 @@ class ExceptionsOnPurpose
         int result;
         int zero = 0;
 
-        // Input
-        Write("Enter an Integer >> ");
-        answer = Convert.ToInt32(ReadLine());
+        try
+        {
+            // Input
+            Write("Enter an Integer >> ");
+            answer = Convert.ToInt32(ReadLine());
 
-        // Process
-        result = answer / zero;
-
+            // Process
+            result = answer / zero;
+        }
+        catch (Exception e)
+        {
+            WriteLine(e.Message);
+        }
+        
         // Output
         WriteLine("The answer is " + answer);
         ReadLine();
