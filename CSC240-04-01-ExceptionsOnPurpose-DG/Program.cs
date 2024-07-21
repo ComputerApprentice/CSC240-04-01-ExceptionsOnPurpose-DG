@@ -25,9 +25,15 @@ class ExceptionsOnPurpose
             // Process
             result = answer / zero;
         }
-        catch (Exception e)
+        catch (FormatException e)
         {
-            WriteLine(e.Message);
+            WriteLine("You did not enter an integer.");
+        }
+        catch (DivideByZeroException e)
+        {
+            WriteLine("This is not your fault.");
+            WriteLine("You entered the integer correctly.");
+            WriteLine("The program divides by zero.");
         }
         
         // Output
